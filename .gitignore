@@ -1,0 +1,28 @@
+# Compiled files (don't track executables)
+*.o
+*.out
+ftpserver
+obj/
+
+# Log files
+logs/
+*.log
+
+# Temporary files
+*~
+*.swp
+*.swo
+*.tmp
+
+# Test files
+tests/temp/
+test.txt
+newfile.txt
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db

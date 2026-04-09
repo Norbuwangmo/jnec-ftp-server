@@ -1,0 +1,2 @@
+2026-04-09 05:44:19 ftp://test@127.0.0.1:2121/%2Fhome/ftp/jnec-ftp-server/src/test.txt -> /home/ftp/test.txt 0-50 1.1 KiB/s
+2026-04-09 05:46:12 /home/ftp/myfile.txt -> ftp://test@127.0.0.1:2121/myfile.txt 0-24 2 B/s

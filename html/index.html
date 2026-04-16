@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JNEC Digital Repository</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="../css/main.css"/>
+</head>
+<body>
+
+<div id="top"></div>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <span>JNEC Digital Repository</span>
+    </div>
+    <div class="nav-links">
+      <a class="active" onclick="showPage('home',this)"><i class="fa-solid fa-house"></i>Home</a>
+      <a onclick="showPage('projects',this)"><i class="fa-solid fa-folder-open"></i>Projects</a>
+      <a onclick="showPage('papers',this)"><i class="fa-solid fa-file-lines"></i>Question Papers</a>
+      <a onclick="showPage('software',this)"><i class="fa-solid fa-floppy-disk"></i>Software</a>
+      <a onclick="showPage('about',this)"><i class="fa-solid fa-circle-info"></i>About</a>
+      <a onclick="showPage('contact',this)"><i class="fa-solid fa-envelope"></i>Contact Us</a>
+    </div>
+    <button class="btn-login"><i class="fa-solid fa-right-to-bracket"></i>Log out</button>
+  </div>
+</nav>
+
+<!-- HOME -->
+<div id="page-home" class="page active">
+  <div class="hero-inner">
+    <div class="hero-top">
+      <img src="../image/image.png" alt="JNEC Logo" class="hero-logo"/>
+      <div class="hero-right">
+        <p>Access student projects, question papers, and software resources. Upload and share your work via our FTP server.</p>
+        <div class="hero-stats">
+          <div class="stat"><div class="num">47</div><div class="lbl">Projects</div></div>
+          <div class="stat"><div class="num">120</div><div class="lbl">Question Papers</div></div>
+          <div class="stat"><div class="num">23</div><div class="lbl">Software Tools</div></div>
+          <div class="stat"><div class="num">96</div><div class="lbl">Students</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECTS -->
+<div id="page-projects" class="page">
+  <div class="page-hero"><div class="page-hero-inner"><h1>Student Projects</h1><p>Final year projects organised by department</p></div></div>
+  <div class="main">
+    <div class="tabs" style="flex-wrap:wrap">
+      <button class="tab active" onclick="switchTab('proj-all',this)"><i class="fa-solid fa-layer-group"></i>All</button>
+      <button class="tab" onclick="switchTab('proj-civil',this)"><i class="fa-solid fa-ruler-combined"></i>Civil &amp; Surveying</button>
+      <button class="tab" onclick="switchTab('proj-eee',this)"><i class="fa-solid fa-bolt"></i>Electrical &amp; Electronics</button>
+      <button class="tab" onclick="switchTab('proj-mech',this)"><i class="fa-solid fa-gears"></i>Mechanical</button>
+      <button class="tab" onclick="switchTab('proj-hum',this)"><i class="fa-solid fa-people-group"></i>Humanities &amp; Mgmt</button>
+      <button class="tab" onclick="switchTab('proj-dit',this)"><i class="fa-solid fa-laptop-code"></i>Information Technology</button>
+    </div>
+
+    <!-- ALL -->
+    <div id="proj-all" class="tab-content active">
+      <div class="dept-section">
+        <div class="dept-label"><i class="fa-solid fa-ruler-combined"></i>Civil Engineering &amp; Surveying</div>
+        <div class="cards-grid">
+          <div class="card"><div class="card-icon icon-civil"><i class="fa-solid fa-folder-open"></i></div><h3>Bridge Load Analysis System</h3><span class="badge badge-civil">Civil</span><div class="meta"><i class="fa-solid fa-user"></i>Sonam Tobgay</div><div class="meta"><i class="fa-solid fa-calendar"></i>Dec 2025 &nbsp;<i class="fa-solid fa-download"></i>15 &nbsp;<i class="fa-solid fa-weight-hanging"></i>3.2 MB</div></div>
+          <div class="card"><div class="card-icon icon-civil"><i class="fa-solid fa-folder-open"></i></div><h3>Land Survey Mapping Tool</h3><span class="badge badge-civil">Civil</span><div class="meta"><i class="fa-solid fa-user"></i>Deki Wangmo</div><div class="meta"><i class="fa-solid fa-calendar"></i>Nov 2025 &nbsp;<i class="fa-solid fa-download"></i>9 &nbsp;<i class="fa-solid fa-weight-hanging"></i>1.5 MB</div></div>
+        </div>
+      </div>
+      <div class="dept-section">
+        <div class="dept-label"><i class="fa-solid fa-bolt"></i>Electrical &amp; Electronics Engineering</div>
+        <div class="cards-grid">
+          <div class="card"><div class="card-icon icon-eee"><i class="fa-solid fa-folder-open"></i></div><h3>Smart Home Automation</h3><span class="badge badge-eee">EEE</span><div class="meta"><i class="fa-solid fa-user"></i>Kinley Dorji</div><div class="meta"><i class="fa-solid fa-calendar"></i>Jan 2026 &nbsp;<i class="fa-solid fa-download"></i>22 &nbsp;<i class="fa-solid fa-weight-hanging"></i>4.1 MB</div></div>
+          <div class="card"><div class="card-icon icon-eee"><i class="fa-solid fa-folder-open"></i></div><h3>Solar Panel Monitoring System</h3><span class="badge badge-eee">EEE</span><div class="meta"><i class="fa-solid fa-user"></i>Tashi Pelden</div><div class="meta"><i class="fa-solid fa-calendar"></i>Oct 2025 &nbsp;<i class="fa-solid fa-download"></i>17 &nbsp;<i class="fa-solid fa-weight-hanging"></i>2.8 MB</div></div>
+        </div>
+      </div>
+      <div class="dept-section">
+        <div class="dept-label"><i class="fa-solid fa-gears"></i>Mechanical Engineering</div>
+        <div class="cards-grid">
+          <div class="card"><div class="card-icon icon-mech"><i class="fa-solid fa-folder-open"></i></div><h3>CAD Model — Hydraulic Press</h3><span class="badge badge-mech">Mech</span><div class="meta"><i class="fa-solid fa-user"></i>Phuntsho Namgay</div><div class="meta"><i class="fa-solid fa-calendar"></i>Dec 2025 &nbsp;<i class="fa-solid fa-download"></i>11 &nbsp;<i class="fa-solid fa-weight-hanging"></i>7.4 MB</div></div>
+          <div class="card"><div class="card-icon icon-mech"><i class="fa-solid fa-folder-open"></i></div><h3>Thermal Analysis of Boiler</h3><span class="badge badge-mech">Mech</span><div class="meta"><i class="fa-solid fa-user"></i>Ugyen Tshering</div><div class="meta"><i class="fa-solid fa-calendar"></i>Sep 2025 &nbsp;<i class="fa-solid fa-download"></i>8 &nbsp;<i class="fa-solid fa-weight-hanging"></i>5.0 MB</div></div>
+        </div>
+      </div>
+      <div class="dept-section">
+        <div class="dept-label"><i class="fa-solid fa-people-group"></i>Humanities &amp; Management</div>
+        <div class="cards-grid">
+          <div class="card"><div class="card-icon icon-hum"><i class="fa-solid fa-folder-open"></i></div><h3>Tourism Promotion Campaign</h3><span class="badge badge-hum">H&amp;M</span><div class="meta"><i class="fa-solid fa-user"></i>Yangchen Lhamo</div><div class="meta"><i class="fa-solid fa-calendar"></i>Nov 2025 &nbsp;<i class="fa-solid fa-download"></i>13 &nbsp;<i class="fa-solid fa-weight-hanging"></i>18 MB</div></div>
+          <div class="card"><div class="card-icon icon-hum"><i class="fa-solid fa-folder-open"></i></div><h3>Business Plan — Local SME</h3><span class="badge badge-hum">H&amp;M</span><div class="meta"><i class="fa-solid fa-user"></i>Dorji Wangchuk</div><div class="meta"><i class="fa-solid fa-calendar"></i>Oct 2025 &nbsp;<i class="fa-solid fa-download"></i>6 &nbsp;<i class="fa-solid fa-weight-hanging"></i>0.9 MB</div></div>
+        </div>
+      </div>
+      <div class="dept-section">
+        <div class="dept-label"><i class="fa-solid fa-laptop-code"></i>Information Technology</div>
+        <div class="cards-grid">
+          <div class="card"><div class="card-icon icon-proj"><i class="fa-solid fa-folder-open"></i></div><h3>FTP Server in C</h3><span class="badge badge-csn">CSN</span><div class="meta"><i class="fa-solid fa-user"></i>Karma Wangchuk</div><div class="meta"><i class="fa-solid fa-calendar"></i>Jan 2026 &nbsp;<i class="fa-solid fa-download"></i>34 &nbsp;<i class="fa-solid fa-weight-hanging"></i>2.4 MB</div></div>
+          <div class="card"><div class="card-icon icon-proj"><i class="fa-solid fa-folder-open"></i></div><h3>Library Management System</h3><span class="badge badge-csn">CSN</span><div class="meta"><i class="fa-solid fa-user"></i>Tshering Dorji</div><div class="meta"><i class="fa-solid fa-calendar"></i>Dec 2025 &nbsp;<i class="fa-solid fa-download"></i>21 &nbsp;<i class="fa-solid fa-weight-hanging"></i>1.8 MB</div></div>
+          <div class="card"><div class="card-icon icon-proj"><i class="fa-solid fa-folder-open"></i></div><h3>Online Voting System</h3><span class="badge badge-csn">CSN</span><div class="meta"><i class="fa-solid fa-user"></i>Sonam Lhamo</div><div class="meta"><i class="fa-solid fa-calendar"></i>Nov 2025 &nbsp;<i class="fa-solid fa-download"></i>18 &nbsp;<i class="fa-solid fa-weight-hanging"></i>3.1 MB</div></div>
+          <div class="card"><div class="card-icon icon-proj"><i class="fa-solid fa-folder-open"></i></div><h3>3D Animation — Bhutanese Dzong</h3><span class="badge badge-dma">DMA</span><div class="meta"><i class="fa-solid fa-user"></i>Pema Yangchen</div><div class="meta"><i class="fa-solid fa-calendar"></i>Oct 2025 &nbsp;<i class="fa-solid fa-download"></i>12 &nbsp;<i class="fa-solid fa-weight-hanging"></i>48 MB</div></div>
+          <div class="card"><div class="card-icon icon-proj"><i class="fa-solid fa-folder-open"></i></div><h3>Network Monitoring Dashboard</h3><span class="badge badge-csn">CSN</span><div class="meta"><i class="fa-solid fa-user"></i>Jigme Tenzin</div><div class="meta"><i class="fa-solid fa-calendar"></i>Sep 2025 &nbsp;<i class="fa-solid fa-download"></i>27 &nbsp;<i class="fa-solid fa-weight-hanging"></i>5.2 MB</div></div>
+          <div class="card"><div class="card-icon icon-proj"><i class="fa-solid fa-folder-open"></i></div><h3>Sextortion Awareness Short Film</h3><span class="badge badge-dma">DMA</span><div class="meta"><i class="fa-solid fa-user"></i>DMA Batch 2025</div><div class="meta"><i class="fa-solid fa-calendar"></i>Nov 2025 &nbsp;<i class="fa-solid fa-download"></i>56 &nbsp;<i class="fa-solid fa-weight-hanging"></i>210 MB</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CIVIL -->
+    <div id="proj-civil" class="tab-content">
+      <div class="cards-grid">
+        <div class="card"><div class="card-icon icon-civil"><i class="fa-solid fa-folder-open"></i></div><h3>Bridge Load Analysis System</h3><span class="badge badge-civil">Civil</span><div class="meta"><i class="fa-solid fa-user"></i>Sonam Tobgay · Dec 2025</div></div>
+        <div class="card"><div class="card-icon icon-civil"><i class="fa-solid fa-folder-open"></i></div><h3>Land Survey Mapping Tool</h3><span class="badge badge-civil">Civil</span><div class="meta"><i class="fa-solid fa-user"></i>Deki Wangmo · Nov 2025</div></div>
+      </div>
+    </div>
+
+    <!-- EEE -->
+    <div id="proj-eee" class="tab-content">
+      <div class="cards-grid">
+        <div class="card"><div class="card-icon icon-eee"><i class="fa-solid fa-folder-open"></i></div><h3>Smart Home Automation</h3><span class="badge badge-eee">EEE</span><div class="meta"><i class="fa-solid fa-user"></i>Kinley Dorji · Jan 2026</div></div>
+        <div class="card"><div class="card-icon icon-eee"><i class="fa-solid fa-folder-open"></i></div><h3>Solar Panel Monitoring System</h3><span class="badge badge-eee">EEE</span><div class="meta"><i class="fa-solid fa-user"></i>Tashi Pelden · Oct 2025</div></div>
+      </div>
+    </div>
+
+    <!-- MECH -->
+    <div id="proj-mech" class="tab-content">
+      <div class="cards-grid">
+        <div class="card"><div class="card-icon icon-mech"><i class="fa-solid fa-folder-open"></i></div><h3>CAD Model — Hydraulic Press</h3><span class="badge badge-mech">Mech</span><div class="meta"><i class="fa-solid fa-user"></i>Phuntsho Namgay · Dec 2025</div></div>
+        <div class="card"><div class="card-icon icon-mech"><i class="fa-solid fa-folder-open"></i></div><h3>Thermal Analysis of Boiler</h3><span class="badge badge-mech">Mech</span><div class="meta"><i class="fa-solid fa-user"></i>Ugyen Tshering · Sep 2025</div></div>
+      </div>
+    </div>
+
+    <!-- HUMANITIES -->
+    <div id="proj-hum" class="tab-content">
+      <div class="cards-grid">
+        <div class="card"><div class="card-icon icon-hum"><i class="fa-solid fa-folder-open"></i></div><h3>Tourism Promotion Campaign</h3><span class="badge badge-hum">H&amp;M</span><div class="meta"><i class="fa-solid fa-user"></i>Yangchen Lhamo · Nov 2025</div></div>
+        <div class="card"><div class="card-icon icon-hum"><i class="fa-solid fa-folder-open"></i></div><h3>Business Plan — Local SME</h3><span class="badge badge-hum">H&amp;M</span><div class="meta"><i class="fa-solid fa-user"></i>Dorji Wangchuk · Oct 2025</div></div>
+      </div>
+    </div>
+
+    <!-- IT -->
+    <div id="proj-dit" class="tab-content">
+      <div class="cards-grid">
+        <div class="card"><div class="card-icon icon-proj"><i class="fa-solid fa-folder-open"></i></div><h3>FTP Server in C</h3><span class="badge badge-csn">CSN</span><div class="meta"><i class="fa-solid fa-user"></i>Karma Wangchuk · Jan 2026</div></div>
+        <div class="card"><div class="card-icon icon-proj"><i class="fa-solid fa-folder-open"></i></div><h3>Library Management System</h3><span class="badge badge-csn">CSN</span><div class="meta"><i class="fa-solid fa-user"></i>Tshering Dorji · Dec 2025</div></div>
+        <div class="card"><div class="card-icon icon-proj"><i class="fa-solid fa-folder-open"></i></div><h3>Online Voting System</h3><span class="badge badge-csn">CSN</span><div class="meta"><i class="fa-solid fa-user"></i>Sonam Lhamo · Nov 2025</div></div>
+        <div class="card"><div class="card-icon icon-proj"><i class="fa-solid fa-folder-open"></i></div><h3>3D Animation — Bhutanese Dzong</h3><span class="badge badge-dma">DMA</span><div class="meta"><i class="fa-solid fa-user"></i>Pema Yangchen · Oct 2025</div></div>
+        <div class="card"><div class="card-icon icon-proj"><i class="fa-solid fa-folder-open"></i></div><h3>Network Monitoring Dashboard</h3><span class="badge badge-csn">CSN</span><div class="meta"><i class="fa-solid fa-user"></i>Jigme Tenzin · Sep 2025</div></div>
+        <div class="card"><div class="card-icon icon-proj"><i class="fa-solid fa-folder-open"></i></div><h3>Sextortion Awareness Short Film</h3><span class="badge badge-dma">DMA</span><div class="meta"><i class="fa-solid fa-user"></i>DMA Batch 2025 · Nov 2025</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- QUESTION PAPERS -->
+<div id="page-papers" class="page">
+  <div class="page-hero">
+  </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+  <div class="main">
+    <!-- COURSE LIST VIEW -->
+    <div id="courses-view" class="courses-view">
+      <h2 class="course-heading"><i class="fa-solid fa-book-open"></i> Select a Course</h2>
+      <div class="course-list" id="course-list-container">
+        <!-- Courses will be populated by JS -->
+      </div>
+    </div>
+
+    <!-- PAPERS VIEW (hidden initially) -->
+    <div id="papers-view" class="papers-view">
+      <div class="course-info-bar">
+        <button class="back-btn" id="back-to-courses"><i class="fa-solid fa-arrow-left"></i> All Courses</button>
+        <div class="filter-bar">
+          <select id="semester-filter">
+            <option value="all">All Semesters</option>
+            <option value="Autumn">Autumn</option>
+            <option value="Spring">Spring</option>
+          </select>
+          <select id="year-filter">
+            <option value="all">All Years</option>
+          </select>
+        </div>
+      </div>
+      <div id="papers-content">
+        <!-- Papers table will be injected here -->
+      </div>
+    </div>
+
+  </div>
+</div>
+
+    
+<div id="page-software" class="page">
+  <div class="page-hero">
+  </div>
+  <div class="main">
+      </div>
+</div>
+
+<!-- ABOUT -->
+<div id="page-about" class="page">
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <h1>About</h1>
+      <p>Learn more about the JNEC Digital Repository and its purpose</p>
+    </div>
+  </div>
+
+  <div class="main" style="max-width:820px">
+    <div class="info-card">
+      <h2><i class="fa-solid fa-circle-info" style="color:#1a3a6b;margin-right:8px"></i>About the Repository</h2>
+      <p>
+        The JNEC Digital Repository is a centralized academic platform developed to store, organize,
+        and share digital learning resources for students and faculty. It provides easy access to
+        student projects, question papers, software tools, and academic materials through a clean
+        and user-friendly web interface.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <h2><i class="fa-solid fa-bullseye" style="color:#1a3a6b;margin-right:8px"></i>Our Mission</h2>
+      <p>
+        Our mission is to support teaching, learning, and research at Jigme Namgyel Engineering College
+        by creating a reliable digital repository where students and lecturers can access academic resources
+        anytime. The system helps preserve student works and promotes knowledge sharing across departments.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <h2><i class="fa-solid fa-gears" style="color:#1a3a6b;margin-right:8px"></i>How it Works</h2>
+      <div class="step-row"><div class="step-num">1</div><span>Students log in and upload their final year projects and academic files through the web interface.</span></div>
+      <div class="step-row"><div class="step-num">2</div><span>The files are stored securely on the backend FTP server developed from scratch in C.</span></div>
+      <div class="step-row"><div class="step-num">3</div><span>Users can browse projects, question papers, and software resources by category.</span></div>
+      <div class="step-row"><div class="step-num">4</div><span>Tutors or administrators can review and approve uploaded content before making it publicly available.</span></div>
+      <div class="step-row"><div class="step-num">5</div><span>Approved resources remain accessible for future students and faculty members.</span></div>
+    </div>
+
+    <div class="info-card">
+      <h2><i class="fa-solid fa-star" style="color:#1a3a6b;margin-right:8px"></i>Key Features</h2>
+      <div class="grid-2">
+        <div class="info-tile">
+          <div class="lbl"><i class="fa-solid fa-folder-tree"></i>Organized Resources</div>
+          <div class="val">Projects, papers, and software arranged by category and department</div>
+        </div>
+        <div class="info-tile">
+          <div class="lbl"><i class="fa-solid fa-cloud-arrow-up"></i>Easy Upload</div>
+          <div class="val">Students can upload academic materials through the portal</div>
+        </div>
+        <div class="info-tile">
+          <div class="lbl"><i class="fa-solid fa-download"></i>Quick Download</div>
+          <div class="val">Users can easily access and download approved resources</div>
+        </div>
+        <div class="info-tile">
+          <div class="lbl"><i class="fa-solid fa-shield-halved"></i>Secure Access</div>
+          <div class="val">Managed content review and controlled visibility of materials</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-card">
+      <h2><i class="fa-solid fa-users" style="color:#1a3a6b;margin-right:8px"></i>Who Can Use This Portal?</h2>
+      <p>
+        This repository is designed for JNEC students, lecturers, tutors, and administrators.
+        Students can use it to find past question papers and reference materials, while faculty
+        members can use it to review submissions and support academic resource management.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<!-- CONTACT -->
+<div id="page-contact" class="page">
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <h1>Contact Us</h1>
+      <p>Get in touch with the Department of Information Technology, JNEC</p>
+    </div>
+  </div>
+
+  <div class="main" style="max-width:760px">
+    <div class="grid-2">
+      <div class="info-tile">
+        <div class="lbl"><i class="fa-solid fa-location-dot"></i>Address</div>
+        <div class="val">Department of Information Technology<br>Jigme Namgyel Engineering College<br>Dewathang, Samdrup Jongkhar, Bhutan</div>
+      </div>
+
+      <div class="info-tile">
+        <div class="lbl"><i class="fa-solid fa-envelope"></i>Email</div>
+        <div class="val" style="color:#1a3a6b">dit@jnec.edu.bt</div>
+      </div>
+
+      <div class="info-tile">
+        <div class="lbl"><i class="fa-solid fa-phone"></i>Phone</div>
+        <div class="val">+975 07 251 401</div>
+      </div>
+
+      <div class="info-tile">
+        <div class="lbl"><i class="fa-solid fa-globe"></i>Website</div>
+        <div class="val" style="color:#1a3a6b">https://www.jnec.edu.bt</div>
+      </div>
+    </div>
+
+    <div class="info-card">
+      <h2><i class="fa-solid fa-clock" style="color:#1a3a6b;margin-right:8px"></i>Office Hours</h2>
+      <div class="step-row"><div class="step-num"><i class="fa-solid fa-calendar-day" style="font-size:10px;"></i></div><span>Monday to Friday: 9:00 AM – 5:00 PM</span></div>
+      <div class="step-row"><div class="step-num"><i class="fa-solid fa-calendar-xmark" style="font-size:10px;"></i></div><span>Saturday, Sunday, and public holidays: Closed</span></div>
+    </div>
+
+    <div class="info-card">
+      <h2><i class="fa-solid fa-headset" style="color:#1a3a6b;margin-right:8px"></i>Support Information</h2>
+      <p>
+        If you are facing issues related to login, file upload, downloads, or missing academic resources,
+        please contact the Department of Information Technology. We will try to respond as soon as possible
+        during working hours.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <h2><i class="fa-solid fa-paper-plane" style="color:#1a3a6b;margin-right:8px"></i>Send a Message</h2>
+      <div class="form-group">
+        <label>Your name</label>
+        <input type="text" placeholder="e.g. Karma Wangchuk"/>
+      </div>
+      <div class="form-group">
+        <label>Email address</label>
+        <input type="email" placeholder="your@email.com"/>
+      </div>
+      <div class="form-group">
+        <label>Subject</label>
+        <input type="text" placeholder="e.g. Help with repository access"/>
+      </div>
+      <div class="form-group">
+        <label>Message</label>
+        <textarea rows="5" placeholder="Write your message here…" style="resize:vertical"></textarea>
+      </div>
+      <button class="btn-submit"><i class="fa-solid fa-paper-plane"></i>Send Message</button>
+    </div>
+  </div>
+</div>
+
+
+<script src="../js/main.js"></script>
+</body>
+</html>
